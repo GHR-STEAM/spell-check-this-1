@@ -85,6 +85,9 @@
 # Should be `an`
 (?<!\b[Ii] )(?<![-.])(?<!\d\s?)\bam\b(?!/pm|[:")])
 
+# Should be `an`
+\sa(?= (?:a(?!nd\s|s\s)|e(?!u)|i(?![ns]\s)|o(?!nc?e)|u(?!biquitous|int|kr|n[ai]|r[ael]|s[aeiu]|tf\d*|til|topia|vula|v\b)|y(?!arn|ear|oga|y)))
+
 # Should be `anymore`
 \bany more[,.]
 

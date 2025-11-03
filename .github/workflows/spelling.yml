@@ -195,7 +195,7 @@ jobs:
   comment-push:
     name: Report (Push)
     # If your workflow isn't running on push, you can remove this job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: spelling
     permissions:
       actions: read
@@ -212,7 +212,7 @@ jobs:
   comment-pr:
     name: Report (PR)
     # If you workflow isn't running on pull_request*, you can remove this job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: spelling
     permissions:
       actions: read
@@ -234,7 +234,7 @@ jobs:
       contents: write
       pull-requests: write
       actions: read
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: ${{
       github.event_name == 'issue_comment' &&
       github.event.issue.pull_request &&
